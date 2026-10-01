@@ -56,8 +56,17 @@ class AppTheme {
           foregroundColor: scheme.onPrimary,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(14)),
-        )
-      )
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: scheme.surface,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: BorderSide.none,
+        ),
+      ),
     );
   }
 }
