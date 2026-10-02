@@ -7,6 +7,7 @@ class ThemeController extends ChangeNotifier{
   bool get isDark => _mode == ThemeMode.dark;
 
   void toggle() {
-
+    _mode = isDark ? ThemeMode.light : ThemeMode.dark;
+    notifyListeners();   // "sab sunne walon ko bata do k kuch badal gaya"
   }
 }
