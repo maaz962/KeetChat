@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'controllers/theme_controller.dart';
+import 'controllers/chat_controller.dart';
 import 'core/theme/app_theme.dart';
-import 'views/splash/splash_view.dart';
+import 'views/home/home_view.dart';
 
 void main() {
   runApp(
       MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (_) => ThemeController()),
+            ChangeNotifierProvider(create: (_) => ChatController()),
 
           ],
       child: const KeetChatApp(),
@@ -28,7 +30,7 @@ class KeetChatApp extends StatelessWidget {
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: theme.mode,
-      home: const SplashView(),
+      home: const HomeView(),
     );
   }
 }
